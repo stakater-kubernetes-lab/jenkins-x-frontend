@@ -50,7 +50,7 @@ pipeline {
             // so we can retrieve the version in later steps
             sh "echo \$(jx-release-version) > VERSION"
           }
-          dir ('./charts/root_APP_NAME') {
+          dir ('./charts/root') {
             container('nodejs') {
               sh "make tag"
             }
